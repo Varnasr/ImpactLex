@@ -2,7 +2,7 @@
 
 **Development Sector Terminology Dictionary with Formulae and Case Studies**
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://impactlex.impactmojo.in)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4f33bcdf-dd5c-4cfc-ba82-2a91ca0b4753/deploy-status)](https://app.netlify.com/projects/impactlex/deploys)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ImpactLex is a free, offline-capable Progressive Web App (PWA) providing rigorous definitions of development sector terminology. Built for NGO professionals, impact practitioners, researchers, and students across South Asia and beyond.

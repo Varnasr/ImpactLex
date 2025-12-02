@@ -1,0 +1,28 @@
+# ImpactLex Robots.txt
+# https://impactlex.impactmojo.in
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap (if you add one later)
+# Sitemap: https://impactlex.impactmojo.in/sitemap.xml
+
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1
+
+# Block AI training crawlers (optional - remove if you want to allow)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /

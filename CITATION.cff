@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use ImpactLex in your research or teaching, please cite it as below."
+type: software
+title: "ImpactLex: Development Sector Terminology Glossary"
+authors:
+  - family-names: Raman
+    given-names: Varna Sri
+url: "https://github.com/Varnasr/ImpactLex"
+repository-code: "https://github.com/Varnasr/ImpactLex"
+license: CC-BY-NC-SA-4.0
+keywords:
+  - glossary
+  - development-sector
+  - terminology
+  - MEAL
+  - pwa
+  - offline-first
+  - education
+date-released: "2025-01-01"

@@ -1,13 +1,26 @@
 # ImpactLex
 
-**Development Sector Terminology Dictionary with Formulae and Case Studies**
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4f33bcdf-dd5c-4cfc-ba82-2a91ca0b4753/deploy-status)](https://app.netlify.com/projects/impactlex/deploys)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Website](https://img.shields.io/badge/Website-impactlex.impactmojo.in-7C3AED)](https://impactlex.impactmojo.in)
+[![PWA](https://img.shields.io/badge/PWA-Offline--Capable-brightgreen)](https://impactlex.impactmojo.in)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/Varnasr/ImpactLex)](https://github.com/Varnasr/ImpactLex/commits/main)
+[![Part of ImpactMojo](https://img.shields.io/badge/Part%20of-ImpactMojo-orange)](https://www.impactmojo.in)
 
-ImpactLex is a free, offline-capable Progressive Web App (PWA) providing rigorous definitions of development sector terminology. Built for NGO professionals, impact practitioners, researchers, and students across South Asia and beyond.
+**A free, offline-capable Progressive Web App providing rigorous definitions of 500+ development sector terms — with formulae, case studies, and real-world applications.**
 
-**[🚀 Launch ImpactLex](https://impactlex.impactmojo.in)** · **[📚 ImpactMojo](https://impactmojo.in)**
+Built for NGO professionals, impact practitioners, researchers, and students across South Asia and beyond.
+
+**[Launch ImpactLex](https://impactlex.impactmojo.in)** · **[ImpactMojo Platform](https://impactmojo.in)**
+
+---
+
+## About
+
+ImpactLex addresses a recurring problem in development work: the same term means different things to different people. MEAL practitioners, economists, gender specialists, and communications professionals all use overlapping vocabulary with subtly different meanings — leading to misaligned programmes, poorly designed evaluations, and avoidable disagreements.
+
+ImpactLex provides a single, authoritative, open-access reference grounded in international standards (OECD-DAC, UNDP, World Bank, J-PAL) and contextualised for South Asian practice.
 
 ---
 
@@ -15,130 +28,123 @@ ImpactLex is a free, offline-capable Progressive Web App (PWA) providing rigorou
 
 | Feature | Description |
 |---------|-------------|
-| 📖 **Glossary** | 200+ terms with rigorous definitions from OECD-DAC, UNDP, World Bank, J-PAL |
-| 📐 **Formulae** | Key equations used in impact evaluation and development economics |
-| 📋 **Case Studies** | Real-world applications from Progresa to BRAC Graduation |
-| 🔍 **Smart Search** | Fuzzy matching across terms, definitions, and acronyms |
-| 🏷️ **Categories** | MEAL, Theory of Change, Gender, Research Methods, Economics, Governance, Climate |
-| 🌙 **Dark Mode** | Comfortable reading in any environment |
-| 📱 **PWA** | Install on mobile/desktop, works offline |
-| 💾 **Bookmarks** | Save terms with CSV export |
+| **500+ Terms** | Rigorous definitions sourced from OECD-DAC, UNDP, World Bank, J-PAL, and peer-reviewed literature |
+| **Domain Coverage** | MEAL, Theory of Change, Gender Studies, Research Methods, Development Economics |
+| **Mathematical Formulae** | Key equations for impact evaluation, sampling, cost-effectiveness, and econometrics |
+| **Case Studies** | Real-world applications — from Progresa to BRAC Graduation to Right to Information |
+| **Full-Text Search** | Instant search across all terms, definitions, and case studies |
+| **Category Filters** | Browse by domain, method type, or complexity level |
+| **Offline-Capable PWA** | Installable on any device — works without internet access once cached |
+| **Dark Mode** | Full dark mode with persistent preference (localStorage) |
+| **Zero Dependencies** | Vanilla HTML/CSS/JS — no framework, no build step |
 
 ---
 
-## Categories
+## Domain Coverage
 
-- **MEAL** — Monitoring, Evaluation, Accountability & Learning
-- **Theory of Change** — Programme design and causal pathways
-- **Gender** — Intersectionality, GBA+, unpaid care, mainstreaming
-- **Research Methods** — RCTs, DiD, PSM, quasi-experimental designs
-- **Development Economics** — Poverty measurement, inequality, cost-effectiveness
-- **Governance** — Accountability, participation, decentralization
-- **Climate** — Adaptation, mitigation, resilience, NDCs
-
----
-
-## Getting Started
-
-### Use Online
-Visit **[impactlex.impactmojo.in](https://impactlex.impactmojo.in)**
-
-### Install as App
-1. Open the site on your phone or desktop browser
-2. Click "Install" when prompted (or use browser menu → "Add to Home Screen")
-3. Access offline anytime
-
-### Run Locally
-```bash
-git clone https://github.com/yourusername/impactlex.git
-cd impactlex
-# Serve with any static server
-python -m http.server 8000
-# or
-npx serve
-```
+| Domain | Example Terms |
+|--------|--------------|
+| **MEAL** | Theory of Change, Logframe, DACS criteria, contribution analysis, utilisation-focused evaluation |
+| **Research Methods** | RCT, quasi-experimental design, propensity score matching, regression discontinuity, ANOVA |
+| **Development Economics** | Elasticity, Gini coefficient, multidimensional poverty, social protection, fiscal multiplier |
+| **Gender Studies** | Gender mainstreaming, care economy, intersectionality, gender-responsive budgeting |
+| **Impact Evaluation** | Attribution, counterfactual, MDE, ITT, LATE, spillovers, external validity |
 
 ---
 
-## Project Structure
+## Architecture
+
+ImpactLex is a single-page Progressive Web App:
 
 ```
-impactlex/
-├── index.html      # Main application (single-page app)
-├── manifest.json   # PWA manifest for installation
-├── sw.js           # Service worker for offline functionality
-├── README.md
+ImpactLex/
+├── index.html          # Complete app (HTML + CSS + JS, single file)
+├── manifest.json       # PWA manifest (installable, offline-capable)
+├── sw.js               # Service Worker (offline caching)
+├── icons/              # App icons for all device sizes
 ├── LICENSE
-└── .gitignore
+└── README.md
 ```
+
+The entire dictionary is embedded in the HTML file as a JavaScript data structure — no external API calls, no server required, fully functional offline.
 
 ---
 
-## Data Sources
+## PWA Installation
 
-Definitions are sourced from authoritative references including:
+On Chrome/Edge:
+1. Visit [impactlex.impactmojo.in](https://impactlex.impactmojo.in)
+2. Click the install icon in the address bar (or menu → "Install app")
+3. ImpactLex will be available on your home screen, works offline
 
-- **OECD-DAC** Evaluation Criteria and Glossary
-- **UNDP** Results-Based Management Handbook
-- **World Bank** Development Impact Evaluation (DIME)
-- **J-PAL** Research Resources
-- **UN Women** Gender Equality Glossary
-- **IPCC** Climate Assessment Reports
-- Academic literature (Sen, Banerjee, Duflo, Angrist, etc.)
+On iOS (Safari):
+1. Tap the Share button
+2. Select "Add to Home Screen"
+
+---
+
+## Tech Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| Frontend | Vanilla HTML / CSS / JavaScript | Single-page dictionary app |
+| PWA | Service Worker + Web App Manifest | Offline capability and installability |
+| Hosting | Netlify | CDN, auto-deploy from GitHub |
+| Domain | impactlex.impactmojo.in | Subdomain via Netlify DNS |
+
+---
+
+## Local Development
+
+```bash
+git clone https://github.com/Varnasr/ImpactLex.git
+cd ImpactLex
+
+# Open directly
+open index.html
+
+# Or serve (required for PWA features like Service Worker)
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
+
+> Note: Service Workers require a secure context (HTTPS or localhost). Use a local server rather than opening the file directly to test PWA features.
 
 ---
 
 ## Contributing
 
-We welcome contributions! To add or improve terms:
+Contributions welcome — new terms, improved definitions, additional case studies, or corrections.
 
-1. Fork the repository
-2. Edit the `GLOSSARY_DATA`, `FORMULAE_DATA`, or `CASE_STUDIES_DATA` arrays in `index.html`
-3. Ensure definitions cite authoritative sources
-4. Submit a pull request
+**Guidelines:**
+- Definitions should cite a primary source (OECD-DAC, J-PAL, World Bank, peer-reviewed paper)
+- Formulae should be rendered in LaTeX notation within the definition
+- Case studies should reference a real programme with a verifiable evaluation
 
-**Quality Standards:**
-- Definitions must be rigorous and source-backed
-- Formulae must include variable explanations
-- Case studies must cite published evaluations
+Open a pull request or [file an issue](https://github.com/Varnasr/ImpactLex/issues).
 
 ---
 
-## Part of ImpactMojo
+## Part of the ImpactMojo Ecosystem
 
-ImpactLex is part of the **[ImpactMojo](https://impactmojo.in)** ecosystem — a free educational platform for development sector professionals offering:
-
-- 📚 Courses in MEAL, Theory of Change, Gender, Research Methods
-- 🧪 Interactive Labs and Tools
-- 🎓 Coaching and Workshops
-- 🌏 Content in English, Hindi, Tamil, Bengali, Telugu, Marathi
+**Related repositories:**
+- [ImpactMojo](https://github.com/Varnasr/ImpactMojo) — Main platform
+- [dev-case-studies](https://github.com/Varnasr/dev-case-studies) — 200 real development case studies
+- [development-discourses](https://github.com/Varnasr/development-discourses) — 500+ curated open-access papers
+- [InsightStack](https://github.com/Varnasr/InsightStack) — MEL tools and calculators
 
 ---
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-You are free to:
-- **Share** — copy and redistribute the material
-- **Adapt** — remix, transform, and build upon the material
-
-Under the following terms:
-- **Attribution** — Credit ImpactMojo and link to the original
-- **NonCommercial** — Not for commercial purposes
-- **ShareAlike** — Distribute contributions under the same license
+- **Content (definitions, formulae, case studies):** CC BY-NC-SA 4.0
+- **Code:** MIT
 
 ---
 
-## Contact
+## Citation
 
-- **Website:** [impactmojo.in](https://impactmojo.in)
-- **Email:** hello@impactmojo.in
-- **LinkedIn:** [ImpactMojo](https://linkedin.com/company/impactmojo)
-
----
-
-<p align="center">
-  <strong>Built with 💜 for the development sector</strong><br>
-  <sub>© 2024 ImpactMojo. All rights reserved.</sub>
-</p>
+```
+Sri Raman, V. (2025). ImpactLex: Development Sector Terminology Dictionary [Software].
+ImpactMojo. https://impactlex.impactmojo.in
+```
